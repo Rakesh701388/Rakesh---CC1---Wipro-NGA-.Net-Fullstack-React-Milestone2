@@ -1,0 +1,93 @@
+/* src/components/FriendList.css */
+.friend-list-container {
+  padding: 20px 0;
+}
+
+.friend-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.friend-list-header h2 {
+  margin: 0;
+  color: #4a69bd;
+}
+
+.friends-list {
+  list-style: none;
+  padding: 0;
+}
+
+.friend-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.friend-item:last-child {
+  border-bottom: none;
+}
+
+.friend-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.friend-actions {
+  display: flex;
+}
+
+.friend-actions button {
+  margin-left: 10px;
+}
+
+.edit-form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-form input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.edit-actions {
+  display: flex;
+}
+
+.edit-actions button {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .friend-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .friend-actions {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .edit-form {
+    flex-direction: column;
+  }
+
+  .edit-form input {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .edit-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

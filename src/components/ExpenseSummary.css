@@ -1,0 +1,158 @@
+/* src/components/ExpenseSummary.css */
+.expense-summary-container {
+  padding: 20px 0;
+}
+
+.expense-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.expense-summary-header h2 {
+  margin: 0;
+  color: #4a69bd;
+}
+
+.total-expenses {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.total-expenses .amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: #4a69bd;
+}
+
+.balances-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.balance-card {
+  flex: 1;
+  min-width: 200px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.balance-card.positive {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+}
+
+.balance-card.negative {
+  background-color: #fbe9e7;
+  border-left: 4px solid #ff5722;
+}
+
+.balance-card.neutral {
+  background-color: #f5f5f5;
+  border-left: 4px solid #9e9e9e;
+}
+
+.balance-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.balance-amount {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.balance-status {
+  font-size: 14px;
+}
+
+.to-receive {
+  color: #2196f3;
+  font-weight: 500;
+}
+
+.to-pay {
+  color: #ff5722;
+  font-weight: 500;
+}
+
+.settled {
+  color: #9e9e9e;
+  font-weight: 500;
+}
+
+.settlements-container {
+  margin-top: 15px;
+}
+
+.settlements-list {
+  list-style: none;
+  padding: 0;
+}
+
+.settlement-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.settlement-item:last-child {
+  border-bottom: none;
+}
+
+.settlement-from {
+  font-weight: 500;
+  flex: 1;
+}
+
+.settlement-arrow {
+  margin: 0 10px;
+  color: #9e9e9e;
+}
+
+.settlement-to {
+  font-weight: 500;
+  flex: 1;
+}
+
+.settlement-amount {
+  font-weight: 700;
+  color: #4a69bd;
+}
+
+@media (max-width: 768px) {
+  .balances-container {
+    flex-direction: column;
+  }
+
+  .balance-card {
+    min-width: auto;
+  }
+
+  .settlement-item {
+    flex-wrap: wrap;
+  }
+
+  .settlement-from,
+  .settlement-to {
+    flex: 0 0 100%;
+  }
+
+  .settlement-arrow {
+    display: none;
+  }
+
+  .settlement-amount {
+    flex: 0 0 100%;
+    text-align: right;
+    margin-top: 5px;
+  }
+}

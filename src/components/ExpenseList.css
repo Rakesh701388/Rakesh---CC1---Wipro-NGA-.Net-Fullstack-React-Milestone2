@@ -1,0 +1,83 @@
+.expense-list-container {
+  padding: 20px 0;
+}
+
+.expense-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.expense-list-header h2 {
+  margin: 0;
+  color: #4a69bd;
+}
+
+.participants-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.participant-checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.participant-checkbox input {
+  margin-right: 5px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.expense-table-container {
+  overflow-x: auto;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-table th,
+.expense-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.expense-table th {
+  background-color: #f5f7fa;
+  font-weight: 500;
+}
+
+.expense-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.expense-table td button {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .expense-table th,
+  .expense-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
